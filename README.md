@@ -10,6 +10,9 @@ sudo systemctl restart docker
 
 sudo systemctl enable --now docker
 
+
 # add your normal user to docker group
 
 sudo usermod -aG docker ec2-user
+
+exit, after adding normal user and re-login and start using the docker commands without giving sudo
