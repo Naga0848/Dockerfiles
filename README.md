@@ -28,3 +28,19 @@ sudo systemctl enable docker
 
  # My Docker Credentials
  username - nagashankar1992332
+
+
+ # Basic Commands
+
+docker images 
+docker pull <image-name>:<tag/version> --> get the image
+
+docker create nginx
+docker ps -a --> all containers including all status
+docker start <container-ID>
+
+
+
+docker rm <container-ID>
+docker run <image>:<tag> -> pull image + create container + start container
+docker run -d nginx --> detach the screen
