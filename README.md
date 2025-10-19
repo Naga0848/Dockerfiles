@@ -44,3 +44,50 @@ docker start <container-ID>
 docker rm <container-ID>
 docker run <image>:<tag> -> pull image + create container + start container
 docker run -d nginx --> detach the screen
+
+
+
+0-65,535   === total no of ports for a container
+
+docker run -d -p 80:80 nginx
+docker exec -it nginx bash
+docker inspect container-name/container-ID
+
+
+# General Notes
+
+How can you create custom images to your applications?
+
+Dockerfile --> a set of instructions to create customised images
+
+FROM
+=========
+FROM almalinux:9
+
+docker build -t from:v1 . --> current directory has Dockerfile
+
+RUN
+=========
+RUN commands
+
+RUN instructions configure the image like installing packages, doing some configurations, etc..
+RUN executes at the time of image creation
+
+systemctl start nginx --> etc/systemd/system/nginx.service
+
+docker pull nginx -> first it checks locally, if it does not exist it checks in hub
+
+CMD
+=========
+CMD executes at the time of container creation i.e at the time of docker run. there should be only one CMD instruction inside Dockerfile
+
+COPY
+=========
+copies the code from local to container
+
+ADD
+=========
+COPY and ADD both copies the code from local to container. but it has two more advantages
+
+1. it can directly fetch the file from internet
+2. it can directly untar the file into container
