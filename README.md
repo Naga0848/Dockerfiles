@@ -45,7 +45,8 @@ docker rm <container-ID>
 docker run <image>:<tag> -> pull image + create container + start container
 docker run -d nginx --> detach the screen
 
-
+docker ps a -q ====> to display all the containers
+docker rm -f 'docker ps a -q'  ====> to delete all the containers at a time
 
 0-65,535   === total no of ports for a container
 
