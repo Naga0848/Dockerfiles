@@ -37,25 +37,33 @@ Again after logging in, we have to start and enable the docker
  # Basic Commands
 
 docker images 
+
 docker pull <image-name>:<tag/version> --> get the image
 
 docker create nginx
+
 docker ps -a --> all containers including all status
+
 docker start <container-ID>
 
 
 
 docker rm <container-ID>
+
 docker run <image>:<tag> -> pull image + create container + start container
+
 docker run -d nginx --> detach the screen
 
 docker ps a -q ====> to display all the containers
+
 docker rm -f 'docker ps a -q'  ====> to delete all the containers at a time
 
-0-65,535   === total no of ports for a container
+0-65,535   === total no of ports for a container or a server
 
 docker run -d -p 80:80 nginx
-docker exec -it nginx bash
+
+docker exec -it nginx bash   ===> to login to a container
+
 docker inspect container-name/container-ID
 
 
