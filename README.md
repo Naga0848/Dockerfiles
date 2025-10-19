@@ -15,18 +15,18 @@
 
     sudo systemctl enable --now docker
 
+    sudo usermod -aG docker ec2-user
+
 
 # add your normal user to docker group  -- because we cannot run the docker commands as a normal ec2-user
 
-sudo usermod -aG docker ec2-user
 
 exit, after adding normal user and re-login and start using the docker commands without giving sudo
 
 Again after logging in, we have to start and enable the docker
 
-sudo systemctl start docker
-
-sudo systemctl enable docker
+    sudo systemctl start docker
+    sudo systemctl enable docker
 
 
 
