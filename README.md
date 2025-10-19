@@ -17,6 +17,11 @@ sudo usermod -aG docker ec2-user
 
 exit, after adding normal user and re-login and start using the docker commands without giving sudo
 
+Again after logging in
+
+sudo systemctl start docker
+
+sudo systemctl enable docker
 
 # In this Repo, we are just understanding the different instructions which we use in our Dockerfile and that is the reaon we mention CMD and give a sleep command to run the container.
 
