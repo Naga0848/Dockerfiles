@@ -11,7 +11,7 @@ sudo systemctl restart docker
 sudo systemctl enable --now docker
 
 
-# add your normal user to docker group
+# add your normal user to docker group  -- because we cannot run the docker commands as a normal ec2-user
 
 sudo usermod -aG docker ec2-user
 
