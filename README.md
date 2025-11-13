@@ -1,6 +1,6 @@
-# Dockerfiles
+#### Dockerfiles
 
-# In this Repo, we are just understanding the different instructions which we use in our Dockerfile and that is the reaon we mention CMD and give a sleep command to run the container.
+#### In this Repo, we are just understanding the different instructions which we use in our Dockerfile and that is the reaon we mention CMD and give a sleep command to run the container.
 
 
 # Commands to install Docker on an EC2
@@ -18,7 +18,7 @@
     sudo usermod -aG docker ec2-user
 
 
-# add your normal user to docker group  -- because we cannot run the docker commands as a normal ec2-user
+#### add your normal user to docker group  -- because we cannot run the docker commands as a normal ec2-user
 
 
 exit, after adding normal user and re-login and start using the docker commands without giving sudo
@@ -34,7 +34,7 @@ Again after logging in, we have to start and enable the docker
  username - nagashankar1992332
 
 
- # Basic Commands
+ #### Basic Commands
 
 docker images 
 
@@ -67,7 +67,7 @@ docker exec -it nginx bash   ===> to login to a container
 docker inspect container-name/container-ID
 
 
-# General Notes
+#### General Notes
 
 How can you create custom images to your applications?
 
