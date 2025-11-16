@@ -106,8 +106,8 @@
 
 #### Understanding the Docker Instructions One-By-One
 
-    FROM INstruction
-    
+    FROM Instruction
+
     docker build -t from:v1   >>> command to build an image
         
     docker images >>> to view the images
@@ -118,6 +118,17 @@
   The below image is for FROM instruction
 
   ![App Screenshot](images/from.png)
+
+    RUN Instruction
+
+    docker build -t run:v1 >>> command to build an image
+
+    docker images >>> to view the images
+
+    dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.v1:latest
+
+  The below image is for FROM instruction  
+  ![App Screenshot](run.png)
       
 
     
