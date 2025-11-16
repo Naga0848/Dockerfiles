@@ -102,3 +102,17 @@
 
     1. it can directly fetch the file from internet
     2. it can directly untar the file into container
+
+
+#### Understanding the Docker Instructions One-By-One
+
+    FROM
+
+        ![alt text](FROM.png)
+
+            docker build -t from:v1   >>> command to build an image
+            
+            docker images >>> to view the images
+            
+            docker run -d --name from from.v1:latest  >>> indicates that we are running a container whose name is from and it is created from an image named from.v1:latest
+        
