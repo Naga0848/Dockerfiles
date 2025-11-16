@@ -150,8 +150,21 @@
 
       
 
+#### To push your images into Docker Hub 
     
     
+    We need to Tag our Local Image for Docker Hub
+
+    docker tag from.v1:latest nagashankar1992332/from.v1:latest
+    docker tag cmd.v1:latest nagashankar1992332/cmd.v1:latest
+    docker tag run.v1:latest nagashankar1992332/run.v1:latest
+
+    Push the Tagged Images
+
+    docker push nagashankar1992332/from.v1:latest
+    docker push nagashankar1992332/cmd.v1:latest
+    docker push nagashankar1992332/run.v1:latest
+
     
     
     
