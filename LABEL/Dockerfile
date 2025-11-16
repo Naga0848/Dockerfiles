@@ -3,3 +3,4 @@ LABEL COURSE="DevOps" \
       COUNTRY="India" \
       PROFESSION="Software" \
       NAME="nagashankar"
+CMD ["sleep", "1000"]
