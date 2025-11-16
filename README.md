@@ -137,7 +137,7 @@
     dokcer run -d --name cmd cmd.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named cmd.
     v1:latest
 
-    RUN Instruction 
+    COPY Instruction 
     Here we are using an index.html in the Dockerfile and finally when we take the publicIP (http://publicIP)  it displays the data inside the index.html
     
     docker build -t copy:v1 . >>> command to build an image
