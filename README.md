@@ -119,7 +119,7 @@
 
     Here we are installing nginx via docker image(in the dockerfile)
 
-    docker build -t run:v1 >>> command to build an image
+    docker build -t run:v1 . >>> command to build an image
 
     docker images >>> to view the images
     
@@ -130,12 +130,23 @@
 
     Here we are using the run image which is already existing in my dockerhub (so base image is FROM nagashankar1992332/run.v1:latest)
 
-    docker build -t cmd:v1 >>> command to build an image
+    docker build -t cmd:v1 . >>> command to build an image
 
     docker images >>> to view the images
     
     dokcer run -d --name cmd cmd.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named cmd.
     v1:latest
+
+    RUN Instruction 
+    Here we are using an index.html in the Dockerfile and finally when we take the publicIP (http://publicIP)  it displays the data inside the index.html
+    
+    docker build -t copy:v1 . >>> command to build an image
+    
+    docker images >>> to view the images
+    
+    dokcer run -d --name copy copy.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named copy.
+    v1:latest
+
 
   The below image is for FROM instruction
 
@@ -146,6 +157,9 @@
 
   The below image is for CMD instruction
   ![App Screenshot](images/cmd.png)
+
+  The below image is for CMD instruction
+  ![App Screenshot](images/copy.png)
 
 
       
