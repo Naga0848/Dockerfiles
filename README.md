@@ -46,8 +46,6 @@
 
         docker start <container-ID>
 
-
-
         docker rm <container-ID>
 
         docker run <image>:<tag> -> pull image + create container + start container
