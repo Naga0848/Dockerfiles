@@ -108,7 +108,7 @@
 
     FROM
 
-        ![alt text](FROM.png)
+        ![alt text](images/FROM.png)
 
             docker build -t from:v1   >>> command to build an image
             
