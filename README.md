@@ -215,6 +215,8 @@
     docker push nagashankar1992332/cmd.v1:latest
     docker push nagashankar1992332/run.v1:latest
 
+    docker exec -it <container-name> bash --- command to login to the container
+
     
     
     
