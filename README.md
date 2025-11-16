@@ -182,15 +182,19 @@
 
   ![App Screenshot](images/from.png)
 
+
   The below image is for RUN instruction  
   ![App Screenshot](images/run.png)
+
 
   The below image is for CMD instruction
   ![App Screenshot](images/cmd.png)
 
+
   The below image is for COPY instruction
   ![App Screenshot](images/copy.png)
   ![App Screenshot](images/COPY1.png)
+
 
   The below image is for ADD instruction
   ![App Screenshot](images/add.png)
