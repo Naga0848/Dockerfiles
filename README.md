@@ -114,20 +114,31 @@
         
     docker run -d --name from from.v1:latest  >>> indicates that we are running a container whose name is from and it is created from an image named from.
     v1:latest
-    
-  The below image is for FROM instruction
 
-  ![App Screenshot](images/from.png)
-
-    RUN Instruction
+    RUN Instruction 
 
     Here we are installing nginx via docker image(in the dockerfile)
 
     docker build -t run:v1 >>> command to build an image
 
     docker images >>> to view the images
+    
+    dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.
+    v1:latest
+    
+  The below image is for FROM instruction
 
-    dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.v1:latest
+  ![App Screenshot](images/from.png)
+
+    
+
+    
+
+    
+
+    
+
+    
 
   The below image is for RUN instruction  
   ![App Screenshot](images/run.png)
