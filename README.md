@@ -103,6 +103,28 @@
     1. it can directly fetch the file from internet
     2. it can directly untar the file into container
 
+    ENTRYPOINT
+    =============
+    CMD instruction can be overriden
+    We can't override ENTRYPOINT, if we try to do it will override
+    We can use combination of CMD and ENTRYPOINT for better results, ENTRYPOINT will have command, default args can be supplied by CMD
+    You can always override default args through command line
+
+    ping google.com ping facebook.com
+
+    ARG
+    =======
+    ARG is build time variables, they can't be accessed inside container. ENV can be accessed build time and then inside container also
+    ARG instruction variables can be overriden
+
+    in an exceptional case ARG can be the first instruction to supply version to base OS in FROM, you cant use that version after FROM instruction
+
+    How can you use ARG inside container?
+
+    ONBUILD
+    ========
+    While devloping images you can put some conditions while others are using your images...
+
 
 ## Understanding the Docker Instructions One-By-One
 
