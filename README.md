@@ -141,7 +141,7 @@
     Here we are using an index.html in the Dockerfile and finally when we take the publicIP (http://publicIP)  it displays the data inside the index.html
     
     docker build -t copy:v1 . >>> command to build an image
-    
+
     docker images >>> to view the images
     
     dokcer run -d --name copy copy.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named copy.
@@ -158,8 +158,9 @@
   The below image is for CMD instruction
   ![App Screenshot](images/cmd.png)
 
-  The below image is for CMD instruction
+  The below image is for COPY instruction
   ![App Screenshot](images/copy.png)
+  ![App Screenshot](images/COPY1.png)
 
 
       
