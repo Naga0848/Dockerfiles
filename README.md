@@ -126,12 +126,26 @@
     dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.
     v1:latest
     
+    RUN Instruction 
+
+    Here we are using the run image which is already existing in my dockerhub (so base image is FROM nagashankar1992332/run.v1:latest)
+
+    docker build -t cmd:v1 >>> command to build an image
+
+    docker images >>> to view the images
+    
+    dokcer run -d --name cmd cmd.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named cmd.
+    v1:latest
+
   The below image is for FROM instruction
 
   ![App Screenshot](images/from.png)
 
   The below image is for RUN instruction  
   ![App Screenshot](images/run.png)
+
+  The below image is for CMD instruction
+  ![App Screenshot](images/cmd.png)
 
 
       
