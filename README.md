@@ -107,7 +107,7 @@
 #### Understanding the Docker Instructions One-By-One
 
   FROM
-  ![App Screenshot](images/from.png)      
+  ![App Screenshot](images/from.png)     
 
         docker build -t from:v1   >>> command to build an image
             
