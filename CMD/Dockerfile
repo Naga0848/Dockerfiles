@@ -1,2 +1,2 @@
-FROM run:v1
+FROM almalinux:9
 CMD ["nginx", "-g", "daemon off;"]
