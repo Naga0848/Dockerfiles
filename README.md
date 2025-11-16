@@ -121,7 +121,7 @@
 
     RUN Instruction
 
-    Here we are installing nginx via docker image
+    Here we are installing nginx via docker image(in the dockerfile)
 
     docker build -t run:v1 >>> command to build an image
 
