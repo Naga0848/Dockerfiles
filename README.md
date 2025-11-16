@@ -106,12 +106,12 @@
 
 #### Understanding the Docker Instructions One-By-One
 
-    FROM
+  FROM
   ![App Screenshot](images/from.png)      
 
-            docker build -t from:v1   >>> command to build an image
+        docker build -t from:v1   >>> command to build an image
             
-            docker images >>> to view the images
+        docker images >>> to view the images
             
-            docker run -d --name from from.v1:latest  >>> indicates that we are running a container whose name is from and it is created from an image named from.v1:latest
+        docker run -d --name from from.v1:latest  >>> indicates that we are running a container whose name is from and it is created from an image named from.v1:latest
         
