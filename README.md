@@ -178,6 +178,15 @@
     dokcer run -d --name add add.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named add.
     v1:latest
 
+    LABEL Instruction 
+    
+    docker build -t label:v1 . >>> command to build an image
+    docker images >>> to view the images
+    
+    dokcer run -d --name add add.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named label:v1
+
+    docker images --filter "label=COURSE=DevOps"   >>> when we have multiple images we can use the label to filter our image
+
   The below image is for FROM instruction
 
   ![App Screenshot](images/from.png)
@@ -199,6 +208,9 @@
   The below image is for ADD instruction
   ![App Screenshot](images/add.png)
   ![App Screenshot](images/add1.png)
+
+  The below image is for label instruction
+  ![App Screenshot](images/label.png)
 
 #### To push your images into Docker Hub 
     
