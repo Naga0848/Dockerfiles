@@ -128,7 +128,7 @@
     dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.v1:latest
 
   The below image is for FROM instruction  
-  ![App Screenshot](run.png)
+  ![App Screenshot](images/run.png)
       
 
     
