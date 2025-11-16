@@ -169,6 +169,14 @@
     dokcer run -d --name copy copy.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named copy.
     v1:latest
 
+    ADD Instruction 
+    Here we are using an a github link Dockerfile and it fetches the data from Internet directly and finally when we take the publicIP (http://publicIP)  it displays the data inside the the github link
+    
+    docker build -t add:v1 . >>> command to build an image
+    docker images >>> to view the images
+    
+    dokcer run -d --name add add.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named add.
+    v1:latest
 
   The below image is for FROM instruction
 
@@ -184,8 +192,9 @@
   ![App Screenshot](images/copy.png)
   ![App Screenshot](images/COPY1.png)
 
-
-      
+  The below image is for ADD instruction
+  ![App Screenshot](images/add.png)
+  ![App Screenshot](images/add1.png)
 
 #### To push your images into Docker Hub 
     
