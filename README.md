@@ -130,16 +130,6 @@
 
   ![App Screenshot](images/from.png)
 
-    
-
-    
-
-    
-
-    
-
-    
-
   The below image is for RUN instruction  
   ![App Screenshot](images/run.png)
 
