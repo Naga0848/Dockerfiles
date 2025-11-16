@@ -104,7 +104,7 @@
     2. it can directly untar the file into container
 
 
-#### Understanding the Docker Instructions One-By-One
+## Understanding the Docker Instructions One-By-One
 
     FROM Instruction
 
@@ -129,6 +129,8 @@
 
   The below image is for FROM instruction  
   ![App Screenshot](images/run.png)
+
+
       
 
     
