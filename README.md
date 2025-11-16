@@ -106,7 +106,7 @@
 
 #### Understanding the Docker Instructions One-By-One
 
-  FROM
+  
   ![App Screenshot](image.png)
       
 
