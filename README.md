@@ -187,6 +187,16 @@
 
     docker images --filter "label=COURSE=DevOps"   >>> when we have multiple images we can use the label to filter our image
 
+
+    LABEL Instruction 
+    
+    docker build -t expose:v1 . >>> command to build an image
+    docker images >>> to view the images
+    
+    dokcer run -d --name expose expose:v1   >>> indicates that we are running a container whose name is expose and it is created from an image named expose:v1
+    
+    Here we run the docker inspect <image-name>   to see the expose port
+
   The below image is for FROM instruction
 
   ![App Screenshot](images/from.png)
@@ -211,6 +221,9 @@
 
   The below image is for label instruction
   ![App Screenshot](images/label.png)
+
+  The below image is for EXPOSE instruction  
+  ![App Screenshot](images/expose.png)
 
 #### To push your images into Docker Hub 
     
