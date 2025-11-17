@@ -149,8 +149,10 @@
     
     dokcer run -d --name run run.v1:latest  >>> indicates that we are running a container whose name is run and it is created from an image named run.
     v1:latest
+
+   ![App Screenshot](images/run.png)
     
-    RUN Instruction 
+    CMD Instruction 
 
     Here we are using the run image which is already existing in my dockerhub (so base image is FROM nagashankar1992332/run.v1:latest)
 
@@ -160,6 +162,7 @@
     
     dokcer run -d --name cmd cmd.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named cmd.
     v1:latest
+   ![App Screenshot](images/cmd.png)
 
     COPY Instruction 
     Here we are using an index.html in the Dockerfile and finally when we take the publicIP (http://publicIP)  it displays the data inside the index.html
@@ -171,7 +174,11 @@
     dokcer run -d --name copy copy.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named copy.
     v1:latest
 
+   ![App Screenshot](images/copy.png)
+   ![App Screenshot](images/COPY1.png)
+
     ADD Instruction 
+
     Here we are using an a github link Dockerfile and it fetches the data from Internet directly and finally when we take the publicIP (http://publicIP)  it displays the data inside the the github link
     
     docker build -t add:v1 . >>> command to build an image
@@ -179,6 +186,9 @@
     
     dokcer run -d --name add add.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named add.
     v1:latest
+ 
+   ![App Screenshot](images/add.png)
+   ![App Screenshot](images/add1.png)
 
     LABEL Instruction 
     
@@ -188,7 +198,8 @@
     dokcer run -d --name add add.v1:latest  >>> indicates that we are running a container whose name is cmd and it is created from an image named label:v1
 
     docker images --filter "label=COURSE=DevOps"   >>> when we have multiple images we can use the label to filter our image
-
+ 
+   ![App Screenshot](images/label.png)
 
     EXPOSE Instruction 
     
@@ -199,6 +210,8 @@
 
     Here we run the docker inspect <image-name>   to see the expose port
 
+   ![App Screenshot](images/expose.png)
+
     ENV Instruction 
     
     docker build -t env:v1 . >>> command to build an image
@@ -208,6 +221,7 @@
     env:v1
     Here we run the docker exec -it <container-name> bash  >>> env 
         to see the env variables inside the container
+  ![App Screenshot](images/env.png)
 
    ENTRYPOINT Instruction
 
@@ -221,6 +235,8 @@
    Incase if we are using only ENTRYPOINT ["ping","google.com"] in the Dockerfile and if we try to run the entrypoint container using the command docker run entry:v1 ping facebook.com, it cannot be overridden here and we get an error
 
    And finally we have to change our Dockerfile and rebuild the image and stat using CMD and ENTRYPOINT instructions together and run the entrypoint container
+   ![App Screenshot](images/entrypoint.png)
+   ![App Screenshot](images/entrypoint1.png)
 
    And while running the container we can ping any other domain also, because here er can replace CMD instruction
    ![App Screenshot](images/entrypoint2.png)
@@ -248,7 +264,7 @@
 
 
   The below image is for CMD instruction
-  ![App Screenshot](images/cmd.png)
+  
 
 
   The below image is for COPY instruction
