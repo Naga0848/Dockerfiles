@@ -238,7 +238,7 @@
    ![App Screenshot](images/entrypoint.png)
    ![App Screenshot](images/entrypoint1.png)
 
-   And while running the container we can ping any other domain also, because here er can replace CMD instruction
+   And while running the container we can ping any other domain also, because here we can replace CMD instruction
    ![App Screenshot](images/entrypoint2.png)
 
    USER Instruction
