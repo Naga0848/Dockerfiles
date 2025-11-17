@@ -71,59 +71,7 @@
 
     Dockerfile --> a set of instructions to create customised images
 
-    FROM
-    =========
-    FROM almalinux:9
 
-    docker build -t from:v1 . --> current directory has Dockerfile
-
-    RUN
-    =========
-    RUN commands
-
-    RUN instructions configure the image like installing packages, doing some configurations, etc..
-    RUN executes at the time of image creation
-
-    systemctl start nginx --> etc/systemd/system/nginx.service
-
-    docker pull nginx -> first it checks locally, if it does not exist it checks in hub
-
-    CMD
-    =========
-    CMD executes at the time of container creation i.e at the time of docker run. there should be only one CMD instruction inside Dockerfile
-
-    COPY
-    =========
-    copies the code from local to container
-
-    ADD
-    =========
-    COPY and ADD both copies the code from local to container. but it has two more advantages
-
-    1. it can directly fetch the file from internet
-    2. it can directly untar the file into container
-
-    ENTRYPOINT
-    =============
-    CMD instruction can be overriden
-    We can't override ENTRYPOINT, if we try to do it will override
-    We can use combination of CMD and ENTRYPOINT for better results, ENTRYPOINT will have command, default args can be supplied by CMD
-    You can always override default args through command line
-
-    ping google.com ping facebook.com
-
-    ARG
-    =======
-    ARG is build time variables, they can't be accessed inside container. ENV can be accessed build time and then inside container also
-    ARG instruction variables can be overriden
-
-    in an exceptional case ARG can be the first instruction to supply version to base OS in FROM, you cant use that version after FROM instruction
-
-    How can you use ARG inside container?
-
-    ONBUILD
-    ========
-    While devloping images you can put some conditions while others are using your images...
 
 
 ## Understanding the Docker Instructions One-By-One
@@ -141,6 +89,14 @@
 
     RUN Instruction 
 
+    RUN instructions configure the image like installing packages, doing some configurations, etc..
+
+    RUN executes at the time of image creation
+
+    systemctl start nginx --> etc/systemd/system/nginx.service
+
+    docker pull nginx -> first it checks locally, if it does not exist it checks in hub
+
     Here we are installing nginx via docker image(in the dockerfile)
 
     docker build -t run:v1 . >>> command to build an image
@@ -154,6 +110,8 @@
     
     CMD Instruction 
 
+    CMD executes at the time of container creation i.e at the time of docker run. there should be only one CMD instruction inside Dockerfile
+
     Here we are using the run image which is already existing in my dockerhub (so base image is FROM nagashankar1992332/run.v1:latest)
 
     docker build -t cmd:v1 . >>> command to build an image
@@ -165,6 +123,9 @@
    ![App Screenshot](images/cmd.png)
 
     COPY Instruction 
+
+    copies the code from local to container
+
     Here we are using an index.html in the Dockerfile and finally when we take the publicIP (http://publicIP)  it displays the data inside the index.html
     
     docker build -t copy:v1 . >>> command to build an image
@@ -178,6 +139,11 @@
    ![App Screenshot](images/COPY1.png)
 
     ADD Instruction 
+
+    COPY and ADD both copies the code from local to container. but it has two more advantages
+
+    1. it can directly fetch the file from internet
+    2. it can directly untar the file into container
 
     Here we are using an a github link Dockerfile and it fetches the data from Internet directly and finally when we take the publicIP (http://publicIP)  it displays the data inside the the github link
     
@@ -224,6 +190,16 @@
   ![App Screenshot](images/env.png)
 
    ENTRYPOINT Instruction
+
+   CMD instruction can be overriden
+
+   We can't override ENTRYPOINT, if we try to do it will override
+
+   We can use combination of CMD and ENTRYPOINT for better results, ENTRYPOINT will have command, default args can be supplied by CMD
+
+   You can always override default args through command line
+
+   ping google.com ping facebook.com   is the error when we try to override the entrypoint
 
    Here in the Dockerfile we are using CMD instruction first ands we build the image using the regular docker build -t entrypoint:v1 . command
 
@@ -280,9 +256,23 @@
 
    docker exec -it <container-name> bash >>> env
  
-
    ![App Screenshot](images/arg.png)
+
+   ONBUILD Instruction
+
+   While devloping images you can put some conditions while others are using your images...
+
+   Others who are using our ONBUILD should make sure that they have index.html in their folder
   
+   docker build -t onbuild:v1 --progress=plain --no-cache .   >>> first we need to build the onbuild image
+
+   docker build -t onbuild-test:v1 --progress=plain --no-cache .   >>> here we are using the onbuild image and creatting something else
+
+  ![App Screenshot](images/onbuild.png)
+
+   docker run -d -p 80:80 onbuild-test:v1
+
+  ![App Screenshot](images/onbuild1.png)
 
 #### To push your images into Docker Hub 
     
