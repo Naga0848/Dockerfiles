@@ -3,7 +3,7 @@
 ## Remember that without CMD instruction we cannot keep the container in a running state, so we try to use a sleep command in in CMD instruction....CMD["sleep", "1000"], so here the container will be up and runs for 1000s, so we can login and perform the necressary tasks with that 1000s only
 
 
-#### In this Repo, we are just understanding the different instructions which we use in our Dockerfile and that is the reaon we mention CMD and give a sleep command to run the container.
+#### In this Repo, we are just understanding the different instructions which we use in our Dockerfiles
 
 
 #### Commands to install Docker on an EC2
