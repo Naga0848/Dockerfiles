@@ -265,6 +265,24 @@
     here we can see that we are in a workdirectory
 
    ![App Screenshot](images/workdir.png)
+
+   ARG Instruction 
+
+   ARG is build time variables, they can't be accessed inside container. ENV can be accessed build time and then inside container also
+
+   ARG instruction variables can be overriden
+
+   In an exceptional case ARG can be the first instruction to supply version to base OS in FROM, you cant use that version after FROM instruction
+
+   ![App Screenshot](images/arg.png)
+
+   docker build -t arg:v1 --progress=plain --no-cache --build-arg version=8 .
+
+   docker run -d arg:v1 
+
+   docker exec -it <container-name> bash >>> env
+    
+
   
 
 #### To push your images into Docker Hub 
