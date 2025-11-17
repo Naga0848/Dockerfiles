@@ -223,6 +223,15 @@
    And while running the container we can ping any other domain also, because here er can replace CMD instruction
    ![App Screenshot](images/entrypoint2.png)
 
+   USER INstruction
+
+   In the Dockerfile, we have to use a user, so that the container will not run with the root user, if incase if the container uses the root user, then it may occupy the space on the host which may cause problem to the remaining container
+
+   docker build -t user:v1 .
+   docker run -d --name user:v1 
+   docker exec -it <container-name> bash  >>> id   --- to see who is the user in the container
+   ![App Screenshot](images/user.png)
+
 
   The below image is for FROM instruction
 
@@ -258,6 +267,7 @@
   The below image is for ENTRYPOINT instruction
   ![App Screenshot](images/entrypoint.png)
   ![App Screenshot](images/entrypoint1.png)
+  
 
 #### To push your images into Docker Hub 
     
