@@ -207,6 +207,19 @@
     Here we run the docker exec -it <container-name> bash  >>> env 
         to see the env variables inside the container
 
+   ENTRYPOINT Instruction
+
+   Here in the Dockerfile we are using CMD instruction first ands we build the image using the regular docker build -t entrypoint:v1 . command
+
+   docker run entry:v1 >>> command to run the entrypoint container, which will continuously ping google.com as per the CMD instruction iside the Dockerfile
+
+   Next time, we are running the entrypoint container and asking it to ping facebook.com
+    docker run entry:v1 ping facebook.com   >>>> EMD is overriden by ENTRYPOINT
+
+   And finally we have to change our Dockerfile and rebuild the image and stat using CMD and ENTRYPOINT instructions together and run the entrypoint container
+
+   
+
   The below image is for FROM instruction
 
   ![App Screenshot](images/from.png)
@@ -237,6 +250,10 @@
 
   The below image is for ENV instruction 
   ![App Screenshot](images/env.png)
+
+  The below image is for ENTRYPOINT instruction
+  ![App Screenshot](images/entrypoint.png)
+  ![App Screenshot](images/entrypoint1.png)
 
 #### To push your images into Docker Hub 
     
