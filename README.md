@@ -1,5 +1,7 @@
 # Dockerfiles
 
+
+![alt text](images/containers.png)
 ## Remember that without CMD instruction we cannot keep the container in a running state, so we try to use a sleep command in CMD instruction....CMD["sleep", "1000"], so here the container will be up and runs for 1000s, so we can login and perform the necressary tasks with that 1000s only
 
 
