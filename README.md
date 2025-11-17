@@ -215,10 +215,14 @@
 
    Next time, we are running the entrypoint container and asking it to ping facebook.com
     docker run entry:v1 ping facebook.com   >>>> EMD is overriden by ENTRYPOINT
+  
+   Incase if we are using only ENTRYPOINT ["ping","google.com"] in the Dockerfile and if we try to run the entrypoint container using the command docker run entry:v1 ping facebook.com, it cannot be overridden here and we get an error
 
    And finally we have to change our Dockerfile and rebuild the image and stat using CMD and ENTRYPOINT instructions together and run the entrypoint container
 
-   
+   And while running the container we can ping any other domain also, because here er can replace CMD instruction
+   ![App Screenshot](images/entrypoint2.png)
+
 
   The below image is for FROM instruction
 
