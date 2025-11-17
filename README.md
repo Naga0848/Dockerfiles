@@ -252,7 +252,19 @@
    docker exec -it <container-name> bash  >>> id   --- to see who is the user in the container
 
    ![App Screenshot](images/user.png)
-   
+
+   WORKDIR Instruction
+
+   In the Dockerfile we create a workdir and the remaining actions takeplace inside it
+
+   docker build -t workdir:v1 .
+
+   docker run -d --name workdir:v1 
+
+   docker exec -it <container-name> bash
+    here we can see that we are in a workdirectory
+
+   ![App Screenshot](images/workdir.png)
   
 
 #### To push your images into Docker Hub 
