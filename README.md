@@ -252,42 +252,7 @@
    docker exec -it <container-name> bash  >>> id   --- to see who is the user in the container
 
    ![App Screenshot](images/user.png)
-
-
-  The below image is for FROM instruction
-
-  ![App Screenshot](images/from.png)
-
-
-  The below image is for RUN instruction  
-  ![App Screenshot](images/run.png)
-
-
-  The below image is for CMD instruction
-  
-
-
-  The below image is for COPY instruction
-  ![App Screenshot](images/copy.png)
-  ![App Screenshot](images/COPY1.png)
-
-
-  The below image is for ADD instruction
-  ![App Screenshot](images/add.png)
-  ![App Screenshot](images/add1.png)
-
-  The below image is for label instruction
-  ![App Screenshot](images/label.png)
-
-  The below image is for EXPOSE instruction  
-  ![App Screenshot](images/expose.png)
-
-  The below image is for ENV instruction 
-  ![App Screenshot](images/env.png)
-
-  The below image is for ENTRYPOINT instruction
-  ![App Screenshot](images/entrypoint.png)
-  ![App Screenshot](images/entrypoint1.png)
+   
   
 
 #### To push your images into Docker Hub 
