@@ -273,16 +273,15 @@
    ARG instruction variables can be overriden
 
    In an exceptional case ARG can be the first instruction to supply version to base OS in FROM, you cant use that version after FROM instruction
-
-   ![App Screenshot](images/arg.png)
-
+   
    docker build -t arg:v1 --progress=plain --no-cache --build-arg version=8 .
 
    docker run -d arg:v1 
 
    docker exec -it <container-name> bash >>> env
-    
+ 
 
+   ![App Screenshot](images/arg.png)
   
 
 #### To push your images into Docker Hub 
